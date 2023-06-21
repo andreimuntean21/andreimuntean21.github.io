@@ -39,11 +39,14 @@ function showSkillsList() {
   ];
 
   var ul = $("#skills ul");
+
   var skillsHTML = skills.map(function (skill) {
+    var className = skill.favorite ? "favorite" : "s";
     // <li class="favorite">HTML</li>
-    return `<li>${skill.name}</li>`;
+    return `<li class="${className}">${skill.name}</li>`;
   });
   ul.innerHTML = skillsHTML.join("");
+  console.info(skillsHTML);
 }
 
 displayPage(activePage);
