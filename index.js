@@ -35,16 +35,13 @@ function showSkillsList(skills) {
   var ul = $("#skills ul");
   var skillsHTML = skills.map(function (skill) {
     var className = skill.favorite ? "favorite" : "s";
-    // <li class="favorite">HTML</li>
     return `<li class="${className}">${skill.name} <span> ‧ ${skill.endorcements}</span></li>`;
   });
   ul.innerHTML = skillsHTML.join("");
 }
 function getSkillsRequest() {
   fetch("skills.json").then(function (r) {
-    r.json().then(function (skills) {
-      showSkillsList(skills);
-    });
+    r.json().then(showSkillsList);
   });
 }
 
