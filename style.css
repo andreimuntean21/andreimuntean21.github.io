@@ -77,6 +77,7 @@ h2#job-title {
   color: #fff;
 }
 
+#top-menu-bar a.active,
 #top-menu-bar a:hover {
   color: #334455;
   background: #fff;
@@ -99,6 +100,7 @@ h2#job-title {
   padding: 24px;
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15), 0 2px 3px rgba(0, 0, 0, 0.2);
   border-radius: 2px;
+  display: none;
 }
 .header-wrapper {
   display: flex;
