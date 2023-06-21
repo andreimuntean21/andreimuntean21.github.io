@@ -31,15 +31,8 @@ function clickOnMenu(e) {
   }
 }
 
-function showSkillsList() {
-  var skills = [
-    { name: "HTML", favorite: true, endorcements: 10 },
-    { name: "CSS", endorcements: 5 },
-    { name: "JS", favorite: true, endorcements: 15 },
-  ];
-
+function showSkillsList(skills) {
   var ul = $("#skills ul");
-
   var skillsHTML = skills.map(function (skill) {
     var className = skill.favorite ? "favorite" : "s";
     // <li class="favorite">HTML</li>
@@ -47,7 +40,14 @@ function showSkillsList() {
   });
   ul.innerHTML = skillsHTML.join("");
 }
+function getSkillsRequest() {
+  fetch("skills.json").then(function (r) {
+    r.json().then(function (skills) {
+      showSkillsList(skills);
+    });
+  });
+}
 
 displayPage(activePage);
 $("#top-menu-bar").addEventListener("click", clickOnMenu);
-showSkillsList();
+getSkillsRequest();
