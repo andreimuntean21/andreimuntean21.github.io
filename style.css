@@ -47,9 +47,14 @@ h2#job-title {
   color: blue;
 }
 
-.favorite {
+li.favorite {
   font-weight: bold;
   color: green;
+}
+
+#skills li span {
+  font-weight: 200;
+  color: gray;
 }
 
 #top-menu-bar {

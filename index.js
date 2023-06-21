@@ -33,9 +33,9 @@ function clickOnMenu(e) {
 
 function showSkillsList() {
   var skills = [
-    { name: "HTML", favorite: true },
-    { name: "CSS" },
-    { name: "JS", favorite: true },
+    { name: "HTML", favorite: true, endorcements: 10 },
+    { name: "CSS", endorcements: 5 },
+    { name: "JS", favorite: true, endorcements: 15 },
   ];
 
   var ul = $("#skills ul");
@@ -43,10 +43,9 @@ function showSkillsList() {
   var skillsHTML = skills.map(function (skill) {
     var className = skill.favorite ? "favorite" : "s";
     // <li class="favorite">HTML</li>
-    return `<li class="${className}">${skill.name}</li>`;
+    return `<li class="${className}">${skill.name} <span> ‧ ${skill.endorcements}</span></li>`;
   });
   ul.innerHTML = skillsHTML.join("");
-  console.info(skillsHTML);
 }
 
 displayPage(activePage);
