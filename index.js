@@ -33,17 +33,19 @@ function clickOnMenu(e) {
 
 function showSkillsList(skills) {
   const ul = $("#skills ul");
-  const skillsHTML = skills.map((skill) => {
+  const skillsHTML = skills.map((skill, i) => {
     const cls = skill.favorite ? "favorite" : "s";
-    return `<li class="${cls}">${skill.name} <span> ‧ ${skill.endorcements}</span></li>`;
+    return `<li class="${cls}">${i + 1}) ${skill.name} <span> ‧ ${
+      skill.endorcements
+    }</span></li>`;
   });
   skillsHTML.push("<li>...</li>");
   ul.innerHTML = skillsHTML.join("");
 }
 function getSkillsRequest() {
-  fetch("skills.json").then((r) => {
-    r.json().then(showSkillsList);
-  });
+  fetch("skills.json")
+    .then((r) => r.json())
+    .then(showSkillsList);
 }
 
 displayPage(activePage);
