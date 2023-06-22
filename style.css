@@ -121,3 +121,70 @@ li.favorite {
   border-radius: 50%;
   border: 5px solid white;
 }
+
+footer {
+  padding: 10px 10px 8px 10px;
+
+  background-color: #057988;
+
+  color: #f5f5f5;
+
+  display: flex;
+
+  flex-direction: row;
+
+  align-items: stretch;
+
+  justify-content: center;
+
+  gap: 5px;
+}
+
+footer .item {
+  color: #f5f5f5;
+
+  text-decoration: none;
+
+  display: flex;
+
+  flex-direction: row;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 3px;
+}
+
+footer a {
+  color: #f5f5f5;
+
+  padding: 2px 5px;
+
+  border-radius: 0.2em;
+
+  transition: 0.5s;
+}
+
+footer a:hover {
+  background-color: #0798ab;
+}
+
+#languages table {
+  width: 50%;
+
+  min-width: 330px;
+
+  border-collapse: collapse;
+}
+
+#languages table th,
+#languages table td {
+  border: 1px solid #0798ab;
+
+  padding: 5px;
+}
+
+th {
+  background: #d1e7ea;
+}
