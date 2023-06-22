@@ -57,5 +57,5 @@ function initEvents() {
 }
 
 displayPage(activePage);
-
+initEvents();
 getSkillsRequest();
